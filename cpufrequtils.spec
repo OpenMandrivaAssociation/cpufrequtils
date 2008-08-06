@@ -4,15 +4,14 @@
 
 Name:         cpufrequtils
 URL:          http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
-Version:      003
-Release:      %mkrel 2
+Version:      004
+Release:      %mkrel 1
 Summary:      Tools to determine and set cpufreq settings
 License:      GPLv2
 Group:        System/Base
 Source:       http://www.kernel.org/pub/linux/utils/kernel/cpufreq/%{name}-%{version}.tar.bz2
 BuildRoot:    %{_tmppath}/%{name}-%{version}-build
 
-BuildRequires: libsysfs-devel 
 BuildRequires: libtool
 
 %description
