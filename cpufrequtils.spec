@@ -81,5 +81,3 @@ rm -rf %{buildroot}
 %{_libdir}/*.a
 %{_libdir}/*.la
 %{_includedir}/*
-
-
