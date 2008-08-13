@@ -49,13 +49,13 @@ Static libraries, include files for cpufrequtils.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall localedir=%{buildroot}%{_datadir}/locale
 
 %find_lang %{name}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
