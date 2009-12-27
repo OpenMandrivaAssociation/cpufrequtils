@@ -4,13 +4,12 @@
 
 Name:         cpufrequtils
 URL:          http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
-Version:      005
-Release:      %mkrel 4
+Version:      006
+Release:      %mkrel 1
 Summary:      Tools to determine and set cpufreq settings
 License:      GPLv2
 Group:        System/Base
 Source:       http://www.kernel.org/pub/linux/utils/kernel/cpufreq/%{name}-%{version}.tar.bz2
-Patch0:	      cpufrequtils-005-parallel.patch
 BuildRoot:    %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires: libtool
@@ -43,7 +42,6 @@ Static libraries, include files for cpufrequtils.
 
 %prep
 %setup -q
-%patch0 -p1 -b .parallel
 
 %build
 %make
