@@ -4,7 +4,7 @@
 
 Name:         cpufrequtils
 URL:          http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
-Version:      006
+Version:      007
 Release:      %mkrel 1
 Summary:      Tools to determine and set cpufreq settings
 License:      GPLv2
