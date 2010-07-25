@@ -1,18 +1,19 @@
-%define major		0
-%define libname 	%mklibname cpufreq %major
-%define develname	%mklibname cpufreq -d
+%define major 0
+%define libname %mklibname cpufreq %{major}
+%define develname %mklibname cpufreq -d
 
-Name:         cpufrequtils
-URL:          http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
-Version:      007
-Release:      %mkrel 2
-Summary:      Tools to determine and set cpufreq settings
-License:      GPLv2
-Group:        System/Base
-Source:       http://www.kernel.org/pub/linux/utils/kernel/cpufreq/%{name}-%{version}.tar.bz2
-BuildRoot:    %{_tmppath}/%{name}-%{version}-build
-
-BuildRequires: libtool
+Summary:	Tools to determine and set cpufreq settings
+Name:		cpufrequtils
+Version:	008
+Release:	%mkrel 1
+License:	GPLv2
+Group:		System/Base
+URL:		http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
+Source0:	http://www.kernel.org/pub/linux/utils/kernel/cpufreq/%{name}-%{version}.tar.bz2
+BuildRequires:	libtool
+BuildRequires:	libsysfs-devel
+BuildRequires:	gettext
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 To make access to the Linux kernel cpufreq subsystem easier for users
@@ -22,19 +23,19 @@ tools to determine current CPUfreq settings and to modify them
 (cpufreq-info and cpufreq-set), and debug tools.
 
 %package -n %{libname}
-Summary:        Dynamic library for programs accessing cpufreq subsystem
-Group:          %{group}
+Summary:	Main library for %{name}
+Group:		%{group}
 
 %description -n %{libname}
 Dynamic library for programs accessing cpufreq subsystem.
 
 %package -n     %{develname}
-Summary:        Static libraries, include files for cpufrequtils
-Group:          Development/C
-Provides:       %{name}-devel = %{version}-%{release}
-Provides:       lib%{name}-devel = %{version}-%{release}
-Provides:       libcpufreq-devel = %{version}-%{release}
-Requires:       %{libname} = %{version}
+Summary:	Development files for %{name}
+Group:		Development/C
+Provides:	%{name}-devel = %{version}-%{release}
+Provides:	lib%{name}-devel = %{version}-%{release}
+Provides:	libcpufreq-devel = %{version}-%{release}
+Requires:	%{libname} = %{version}-%{release}
 Obsoletes:	%{mklibname cpufreq 0 -d}
 
 %description -n %{develname}
@@ -77,6 +78,4 @@ rm -rf %{buildroot}
 %files -n %{develname}
 %defattr(-, root, root)
 %{_libdir}/*.so
-%{_libdir}/*.a
-%{_libdir}/*.la
 %{_includedir}/*
