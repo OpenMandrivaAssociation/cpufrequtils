@@ -5,7 +5,7 @@
 Summary:	Tools to determine and set cpufreq settings
 Name:		cpufrequtils
 Version:	008
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2
 Group:		System/Base
 URL:		http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
