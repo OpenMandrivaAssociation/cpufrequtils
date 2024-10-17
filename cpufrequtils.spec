@@ -8,7 +8,7 @@ Version:	008
 Release:	4
 License:	GPLv2
 Group:		System/Base
-URL:		http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
+URL:		https://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
 Source0:	http://www.kernel.org/pub/linux/utils/kernel/cpufreq/%{name}-%{version}.tar.bz2
 BuildRequires:	libtool
 BuildRequires:	sysfsutils-devel
